@@ -128,3 +128,5 @@ jobs:
           * fires notification if allowed in the settings
     |-- post actions/checkout@v2
 ```
+
+Updated 11/10/2022 to support node16. Some dependencies updated.

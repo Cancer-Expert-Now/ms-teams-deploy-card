@@ -15,7 +15,7 @@ try {
     ) {
       formatAndNotify(
         "exit",
-        workflowRunStatus.conclusion,
+        workflowRunStatus.conclusion ?? undefined,
         workflowRunStatus.elapsedSeconds
       );
     } else {
@@ -23,5 +23,5 @@ try {
     }
   }, 2000);
 } catch (error) {
-  setFailed(error.message);
+  setFailed((error as Error).message);
 }
